@@ -21,5 +21,36 @@ public class conditionalStatements {
         }
         s.close();
 
+        System.out.print(switchAdvanced(12));
+
+    }
+    static int switchAdvanced(int a){
+        int result =1 ;
+        int z=a%3;
+        switch (z) {
+
+            case 0:
+            
+            int y = a%2;
+            switch(y) {
+                case 0:
+                System.out.println("Multiple of 6");
+                break;2
+                default:
+                    System.out.println("Multiple of 3");
+
+            }
+
+                
+                break;
+        
+            default:
+            System.out.println("Not a multiple of 2,3,6");
+                break;
+        }
+
+
+
+        return result;
     }
 }
