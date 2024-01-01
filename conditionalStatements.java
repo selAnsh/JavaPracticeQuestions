@@ -35,7 +35,7 @@ public class conditionalStatements {
             switch(y) {
                 case 0:
                 System.out.println("Multiple of 6");
-                break;2
+                break;
                 default:
                     System.out.println("Multiple of 3");
 
