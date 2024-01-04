@@ -4,6 +4,18 @@ import java.util.Scanner;
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
+
+    public static boolean keith(long n) {
+        long a[] = utilities.numToArray(n);
+        long len = utilities.lengthNum(n);
+        long[] arr =a;
+        long check =0;
+        while(check < n){
+            utilities.arrAdd(arr);
+        
+    }
+        return false;
+    }
     /**
      * fascinating number , 3 digit number a
      *Concatenate a +a*2 + a*3
@@ -15,10 +27,21 @@ public class MagicalNumbers {
             return false;
         } 
         String fasc = Long.toString(n).concat(Long.toString(n*2)).concat(Long.toString(n*3)); 
-        for(int i =0;i< fasc.length();i++){
-            
+        if(fasc.length()> 9){
+            return false;
         }
+        for(int i =0;i< fasc.length();i++){
+            int count=0;
+            for (int j=0;j< fasc.length();j++){
+                if (i!=j && fasc.charAt(i) == fasc.charAt(j)){
+                    count+=1;
+                }
+            }
+            System.out.printf("%c, %d \n",fasc.charAt(i), count);
+        if (count>=1)
         return false;
+        }
+        return true;
     }
 /**
  * Tech number 
@@ -109,7 +132,7 @@ public class MagicalNumbers {
             System.out.println(peterson(n)?"Peterson":"not Peterson");
             System.out.println(tech(n)?"Tech":"not tech");
             System.out.println(sunny(n)?"Sunny" : "Not sunny");
-            System.out.println(fascinating(n));
-            
+            System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
+            System.out.println(keith(n)?"Keith":"Kieth");
     }
 }

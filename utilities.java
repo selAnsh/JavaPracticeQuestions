@@ -24,6 +24,14 @@ public class utilities {
         }
         return 1;
     }
+
+    public static long arrAdd(long a[]){
+        long val=0;
+        for (int i =0;i< a.length;i++){
+            val+=a[i];
+        }
+        return val;
+    }
     
     //Common utility to convert number to array
     public static long[] numToArray(long n){
