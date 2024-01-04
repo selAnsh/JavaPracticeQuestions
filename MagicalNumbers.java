@@ -8,6 +8,7 @@ public class MagicalNumbers {
      * fascinating number , 3 digit number a
      *Concatenate a +a*2 + a*3
      If it contains 1 to 9 exactly once, it is a fascinating number 
+     Comment changed
      * */
     public static boolean fascinating(long n){
         if(utilities.lengthNum(n)!=3){
