@@ -4,6 +4,21 @@ import java.util.Scanner;
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
+    /**
+     * fascinating number , 3 digit number a
+     *Concatenate a +a*2 + a*3
+     If it contains 1 to 9 exactly once, it is a fascinating number 
+     * */
+    public static boolean fascinating(long n){
+        if(utilities.lengthNum(n)!=3){
+            return false;
+        } 
+        String fasc = Long.toString(n).concat(Long.toString(n*2)).concat(Long.toString(n*3)); 
+        for(int i =0;i< fasc.length();i++){
+            
+        }
+        return false;
+    }
 /**
  * Tech number 
  * A even number when divided into two parts and added, then square of added number is same
@@ -93,6 +108,7 @@ public class MagicalNumbers {
             System.out.println(peterson(n)?"Peterson":"not Peterson");
             System.out.println(tech(n)?"Tech":"not tech");
             System.out.println(sunny(n)?"Sunny" : "Not sunny");
+            System.out.println(fascinating(n));
             
     }
 }
