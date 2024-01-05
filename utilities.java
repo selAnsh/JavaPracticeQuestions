@@ -61,8 +61,6 @@ public class utilities {
                 n/=10;
                 count++;
             }
-            
-        System.out.println(Arrays.toString(arr));
             return arr;
     }
     public static long arrayToNum(long[] arr){

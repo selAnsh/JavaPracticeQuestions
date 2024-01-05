@@ -4,6 +4,16 @@ import java.util.Scanner;
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
+
+    /**
+     * Square of a number and adding its digits equal to original number is neon number 
+     *
+     */
+    public static boolean neon(long n){
+        return utilities.arrAdd(utilities.numToArray(Math.round(Math.pow(n,2)))) == n ? true: false;
+    }
+
+
     /**
      * A positive n digit number X is called a Keith number (or repfigit number) if it is 
      * arranged in a special number sequence generated using its digits. The special sequence has
@@ -141,5 +151,6 @@ public class MagicalNumbers {
             //System.out.println(sunny(n)?"Sunny" : "Not sunny");
             //System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
             System.out.println(keith(n)?"Keith":"Non Kieth");
+            System.out.println(neon(n)?"Neon":"Non Neon");
     }
 }
