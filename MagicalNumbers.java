@@ -4,7 +4,12 @@ import java.util.Scanner;
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
-
+    /**
+     * A positive n digit number X is called a Keith number (or repfigit number) if it is 
+     * arranged in a special number sequence generated using its digits. The special sequence has
+     *  first n terms as digits of x and other terms are recursively evaluated as the sum of previous n terms
+     * https://www.javatpoint.com/keith-number-in-java
+     */
     public static boolean keith(long n) {
         long a[] = utilities.numToArray(n);
         long[] arr =utilities.revArr(a);
