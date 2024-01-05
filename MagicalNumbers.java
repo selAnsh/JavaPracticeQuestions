@@ -7,12 +7,14 @@ public class MagicalNumbers {
 
     public static boolean keith(long n) {
         long a[] = utilities.numToArray(n);
-        long len = utilities.lengthNum(n);
-        long[] arr =a;
+        long[] arr =utilities.revArr(a);
         long check =0;
-        while(check < n){
-            utilities.arrAdd(arr);
-        
+        while(check < n ) {
+            check = utilities.arrAdd(arr);
+            if(check == n){
+                return true;
+            }
+            arr = utilities.movAndAdd(arr, check);
     }
         return false;
     }
@@ -127,12 +129,12 @@ public class MagicalNumbers {
             Scanner s = new Scanner(System.in);        
             System.out.println("This is the program to find various MATHEMATICAL numbers");
             long n =s.nextLong();
-            System.out.println(reverse(n));
-            System.out.println(automorphic(n)?"Automorphic":"not automorphic");
-            System.out.println(peterson(n)?"Peterson":"not Peterson");
-            System.out.println(tech(n)?"Tech":"not tech");
-            System.out.println(sunny(n)?"Sunny" : "Not sunny");
-            System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
-            System.out.println(keith(n)?"Keith":"Kieth");
+           // System.out.println(reverse(n));
+            //System.out.println(automorphic(n)?"Automorphic":"not automorphic");
+            //System.out.println(peterson(n)?"Peterson":"not Peterson");
+            //System.out.println(tech(n)?"Tech":"not tech");
+            //System.out.println(sunny(n)?"Sunny" : "Not sunny");
+            //System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
+            System.out.println(keith(n)?"Keith":"Non Kieth");
     }
 }

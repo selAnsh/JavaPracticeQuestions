@@ -17,7 +17,26 @@ public class utilities {
         flag = false;
         return len;
     }
+    public static long[] revArr(long[] arr){
+        long[] arr1 = new long[arr.length];
+        
+        for (int i =0;i< arr.length;i++) {
+            arr1[i] = arr[arr.length-1-i];
+        }
 
+        return arr1;
+        
+    }
+
+    public static long[] movAndAdd(long[] arr, long num){
+        for (int i=0;i< arr.length -1;i++){
+        arr[i] = arr[i+1];    
+        }
+        arr[arr.length-1] = num;
+        System.out.println(Arrays.toString(arr));
+        
+        return arr;
+    }
     public static long fact(long a) {
         if (a>0){
             return a*fact(a-1);
