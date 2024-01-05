@@ -51,6 +51,14 @@ public class utilities {
         }
         return val;
     }
+
+    public static long arrMul(long a[]){
+        long val=1;
+        for (int i =0;i< a.length;i++){
+            val*=a[i];
+        }
+        return val;
+    }
     
     //Common utility to convert number to array
     public static long[] numToArray(long n){

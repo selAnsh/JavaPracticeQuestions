@@ -5,6 +5,10 @@ public class MagicalNumbers {
 
     static utilities ut = new utilities();
 
+    public static boolean spy(long n) {
+
+        return utilities.arrMul(utilities.numToArray(n)) == utilities.arrAdd(utilities.numToArray(n)) ? true : false;
+    }
     /**
      * Square of a number and adding its digits equal to original number is neon number 
      *
@@ -152,5 +156,6 @@ public class MagicalNumbers {
             //System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
             System.out.println(keith(n)?"Keith":"Non Kieth");
             System.out.println(neon(n)?"Neon":"Non Neon");
+            System.out.println(spy(n) ? "spy" : "non spy");
     }
 }
