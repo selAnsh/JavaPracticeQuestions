@@ -6,7 +6,11 @@ import java.util.Scanner;
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
-    
+
+
+    public static boolean buzz(long n) {
+        return (n%10==7 || n/7==0 ) ? true:false;
+    }
 
     /*
      * reverse of the number and the number itself is a prime
@@ -205,5 +209,6 @@ public class MagicalNumbers {
             //System.out.println(spy(n) ? "spy" : "non spy");
             System.out.println(autobiography(n) ? "auto" : "non auto");
             System.out.println(emirp(n)?"emirp": "non empirp");
+            System.out.println(buzz(n) ? "buzz": "non buzz");
         }
 }
