@@ -27,6 +27,15 @@ public class utilities {
         return arr1;
         
     }
+    
+    public static boolean prime(long n){
+        for (int i=2;i<n;i++){
+            if (n%2==0){
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static long[] movAndAdd(long[] arr, long num){
         for (int i=0;i< arr.length -1;i++){

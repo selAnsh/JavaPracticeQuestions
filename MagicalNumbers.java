@@ -1,9 +1,55 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class MagicalNumbers {
 
     static utilities ut = new utilities();
+    
+
+    /*
+     * reverse of the number and the number itself is a prime
+     */
+    public static boolean emirp(long n) {
+        long a = utilities.arrayToNum(utilities.revArr(utilities.numToArray(n)));
+
+        return (utilities.prime(a) && utilities.prime(n)) ? true: false;
+    }
+    /*
+     * first digit represnts number of 0 in the number, second digit represent number of 1 in number
+     * and so on.
+     * 1210
+     * no of 0 - 1
+     * no of 1 - 2
+     * no of 2 - 1
+     * no of 3 - 0
+     * So it is a autobiography number
+     */
+
+    public static boolean autobiography(long n) {
+        long[] num_arr = utilities.numToArray(n);
+        Arrays.sort(num_arr);
+        long[] count = new long[num_arr.length];
+        for (int i =0;i< num_arr.length ;i++){
+            long counter=0;
+            for (int j =0;j<num_arr.length;j++){
+                if(num_arr[j] ==i){
+                    counter++;
+                }
+            }
+            if( counter!=num_arr[i]){
+                return false;
+            }
+        }
+//        return true;
+        return utilities.arrayToNum(utilities.revArr(count)) == n?true:false;
+    }
+
+        /**
+     * Sum of digits and multiplication of digits of number is equal, then it is a spy number, 
+     *
+     */
 
     public static boolean spy(long n) {
 
@@ -154,8 +200,10 @@ public class MagicalNumbers {
             //System.out.println(tech(n)?"Tech":"not tech");
             //System.out.println(sunny(n)?"Sunny" : "Not sunny");
             //System.out.println(fascinating(n)? "Fascinating" : "Not fascinating");
-            System.out.println(keith(n)?"Keith":"Non Kieth");
-            System.out.println(neon(n)?"Neon":"Non Neon");
-            System.out.println(spy(n) ? "spy" : "non spy");
-    }
+            //System.out.println(keith(n)?"Keith":"Non Kieth");
+            //System.out.println(neon(n)?"Neon":"Non Neon");
+            //System.out.println(spy(n) ? "spy" : "non spy");
+            System.out.println(autobiography(n) ? "auto" : "non auto");
+            System.out.println(emirp(n)?"emirp": "non empirp");
+        }
 }
